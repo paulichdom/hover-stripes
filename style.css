@@ -60,7 +60,17 @@ h6 {
 }
 
 .square {
+    --gt: linear-gradient(black, black);
+    --n: 100px;
+
     width: 500px;
     height: 500px;
-    background: palegreen;
+    background:
+        var(--gt) top right,
+        var(--gt) top var(--n) right,
+        var(--gt) top calc(var(--n) * 2) right,
+        var(--gt) top calc(var(--n) * 3) right,
+        var(--gt) top calc(var(--n) * 4) right palegreen;
+    background-repeat: no-repeat;
+
 }
